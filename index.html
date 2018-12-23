@@ -147,14 +147,15 @@
             <!-- Films -->
             <article id="films">
                 <h2 class="major">Films</h2>
-                <blockquote>A first step into scoring and film</blockquote>
+                <blockquote>"How Can Mirrors Be Real If Our Eyes Aren't Real"</blockquote>
                 <div>
                     <h3>
                         Cover Up
                         <small class="text-muted">2017</small>
                     </h3>
                     <div class="embed-responsive embed-responsive-16by9" align="center"><iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/owWb7gGVtRI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-                    <p class="smallerText">Indie art video, exquisitely expressing and juxtaposing the societal expectations of masking your true emotions with a facade of happiness, while being burdened by the true pressures of life underneath.</p>
+                    <br />
+                    <blockquote>Indie art video, exquisitely expressing and juxtaposing the societal expectations of masking your true emotions with a facade of happiness, while being burdened by the true pressures of life underneath.</blockquote>
                     <hr>
                 </div>
                 <div>
@@ -163,15 +164,18 @@
                         <small class="text-muted">2016</small>
                     </h3>
                     <div class="embed-responsive embed-responsive-16by9" align="center"><iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/M7vnwCJuHv4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-                    <p class="smallerText">little animation about growing up in the big bold world.</p>
+                    <br />
+                    <blockquote>little animation about growing up in the big bold world.</blockquote>
                 </div>
             </article>
 
             <!-- Contact -->
             <article id="contact">
                 <h2 class="major">Contact</h2>
-                <form method="post" action="" enctype="text/plain">
-                    <div class="fields">
+                <form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbyMqeqAocdoioWnWFCFIFeCQL2ZxuFYmdDe5NyDxbgvnYpt4hlo/exec" enctype="text/plain">
+                    <p class="thankyou_message">Your response has been recorded!</p>
+                    <p class="alert email-invalid form-elements">Invalid Email Address</p>
+                    <div class="fields form-elements">
                         <div class="field half">
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name" />
@@ -184,10 +188,11 @@
                             <label for="message">Message</label>
                             <textarea name="message" id="message" rows="4"></textarea>
                         </div>
+                        <input id="honeypot" type="text" name="honeypot" value="" />
                     </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="primary" /></li>
-                        <li><input type="reset" value="Reset" /></li>
+                    <ul class="actions form-elements">
+                        <li><input type="submit" value="Send Message" class="primary submit-button" /></li>
+                        <li><input type="reset" class="submit-button" value="Reset" /></li>
                     </ul>
                 </form>
                 <ul class="icons">
@@ -296,6 +301,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/lazysizes.min.js" async=""></script>
+    <script data-cfasync="false" type="text/javascript" src="assets/js/form-submission-handler.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

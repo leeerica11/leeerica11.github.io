@@ -5,6 +5,22 @@
 	Custom styles
 */
 
+#honeypot {
+    display: none;
+}
+
+.alert {
+    color: red;
+}
+
+.email-invalid {
+    display: none;
+}
+
+.thankyou_message {
+    display: none;
+}
+
 .smallerText {
     font-size: 0.75em;
 }
