@@ -5,6 +5,10 @@
 	Custom styles
 */
 
+html {
+    overflow-y: scroll;
+}
+
 .embed-responsive {
     position: relative;
     display: block;
