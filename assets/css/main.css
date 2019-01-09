@@ -38,7 +38,7 @@ html {
 }
 
 .text-muted {
-    color: #6c757d!important;
+    color: #235D7F!important;
 }
 
 .circle {
@@ -240,7 +240,7 @@ html {
 }
 
 body {
-    background: #1b1f22;
+    background: #B2DEE3;
 }
 
 body.is-preload *,
@@ -297,7 +297,7 @@ a {
     -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
     -ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-    border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+    border-bottom: dotted 1px rgba(157, 198, 233, 0.226);
     text-decoration: none;
     color: inherit;
 }
@@ -419,7 +419,7 @@ blockquote {
 }
 
 code {
-    background: rgba(255, 255, 255, 0.075);
+    background: rgba(2157, 198, 233, 0.226);
     border-radius: 4px;
     font-family: "Courier New", monospace;
     font-size: 0.9rem;
@@ -579,7 +579,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 select:focus,
 textarea:focus {
-    background: rgba(255, 255, 255, 0.075);
+    background: rgba(157, 198, 233, 0.226);
     border-color: #ffffff;
     box-shadow: 0 0 0 1px #ffffff;
 }
@@ -689,7 +689,7 @@ input[type="radio"]:checked+label:before {
 
 input[type="checkbox"]:focus+label:before,
 input[type="radio"]:focus+label:before {
-    background: rgba(255, 255, 255, 0.075);
+    background: rgba(157, 198, 233, 0.226);
     border-color: #ffffff;
     box-shadow: 0 0 0 1px #ffffff;
 }
@@ -703,27 +703,27 @@ input[type="radio"]+label:before {
 }
 
 ::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(157, 198, 233, 0.226) !important;
     opacity: 1.0;
 }
 
 :-moz-placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(157, 198, 233, 0.226) !important;
     opacity: 1.0;
 }
 
 ::-moz-placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(157, 198, 233, 0.226) !important;
     opacity: 1.0;
 }
 
 :-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(157, 198, 233, 0.226) !important;
     opacity: 1.0;
 }
 
 .formerize-placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(157, 198, 233, 0.226) !important;
     opacity: 1.0;
 }
 
@@ -1043,7 +1043,7 @@ ul.icons li:last-child {
 
 ul.icons li a {
     border-radius: 100%;
-    box-shadow: inset 0 0 0 1px #ffffff;
+    box-shadow: inset 0 0 0 1px #B2DEE3;
     display: inline-block;
     height: 2.25rem;
     line-height: 2.25rem;
@@ -1052,11 +1052,11 @@ ul.icons li a {
 }
 
 ul.icons li a:hover {
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: rgba(157, 198, 233, 0.226);
 }
 
 ul.icons li a:active {
-    background-color: rgba(255, 255, 255, 0.175);
+    background-color: rgba(157, 198, 233, 0.226);
 }
 
 
@@ -1079,7 +1079,7 @@ table tbody tr {
 }
 
 table tbody tr:nth-child(2n+1) {
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: rgba(157, 198, 233, 0.226);
 }
 
 table td {
@@ -1169,7 +1169,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: rgba(157, 198, 233, 0.226);
 }
 
 input[type="submit"]:active,
@@ -1177,7 +1177,7 @@ input[type="reset"]:active,
 input[type="button"]:active,
 button:active,
 .button:active {
-    background-color: rgba(255, 255, 255, 0.175);
+    background-color: rgba(157, 198, 233, 0.226);
 }
 
 input[type="submit"].icon:before,
@@ -1408,7 +1408,7 @@ body.is-preload #bg:before {
     left: calc(50% - 1px);
     width: 1px;
     height: calc(3.5rem + 1px);
-    background: #ffffff;
+    background: #B2DEE3;
 }
 
 #header> :first-child {
@@ -1423,7 +1423,7 @@ body.is-preload #bg:before {
     width: 5.5rem;
     height: 5.5rem;
     line-height: 5.5rem;
-    border: solid 1px #ffffff;
+    border: solid 1px #B2DEE3;
     border-radius: 100%;
 }
 
@@ -1433,7 +1433,7 @@ body.is-preload #bg:before {
 
 #header .content {
     border-style: solid;
-    border-color: #ffffff;
+    border-color: #B2DEE3;
     border-top-width: 1px;
     border-bottom-width: 1px;
     max-width: 100%;
@@ -1472,13 +1472,13 @@ body.is-preload #bg:before {
     margin-bottom: 0;
     list-style: none;
     padding-left: 0;
-    border: solid 1px #ffffff;
+    border: solid 1px #B2DEE3;
     border-radius: 4px;
 }
 
 #header nav ul li {
     padding-left: 0;
-    border-left: solid 1px #ffffff;
+    border-left: solid 1px #B2DEE3;
 }
 
 #header nav ul li:first-child {
@@ -1498,11 +1498,11 @@ body.is-preload #bg:before {
 }
 
 #header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: rgba(157, 198, 233, 0.226);
 }
 
 #header nav ul li a:active {
-    background-color: rgba(255, 255, 255, 0.175);
+    background-color: rgba(157, 198, 233, 0.226);
 }
 
 #header nav.use-middle:after {
@@ -1513,7 +1513,7 @@ body.is-preload #bg:before {
     left: calc(50% - 1px);
     width: 1px;
     height: 100%;
-    background: #ffffff;
+    background: #B2DEE3;
 }
 
 #header nav.use-middle ul li.is-middle {
@@ -1597,7 +1597,7 @@ body.is-preload #header .content .inner {
     }
     #header nav ul li {
         border-left: 0;
-        border-top: solid 1px #ffffff;
+        border-top: solid 1px #B2DEE3;
     }
     #header nav ul li:first-child {
         border-top: 0;
@@ -1705,11 +1705,11 @@ body.is-preload #header .content .inner {
 }
 
 #main article .close:hover:before {
-    background-color: rgba(255, 255, 255, 0.075);
+    background-color: rgba(157, 198, 233, 0.226);
 }
 
 #main article .close:active:before {
-    background-color: rgba(255, 255, 255, 0.175);
+    background-color: rgba(157, 198, 233, 0.226);
 }
 
 @media screen and (max-width: 736px) {
