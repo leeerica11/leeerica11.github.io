@@ -285,7 +285,7 @@ body,
 input,
 select,
 textarea {
-    color: #ffffff;
+    color: #cdebfc;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 1rem;
@@ -308,7 +308,7 @@ a:hover {
 
 strong,
 b {
-    color: #ffffff;
+    color: #cdebfc;
     font-weight: 600;
 }
 
@@ -327,7 +327,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #ffffff;
+    color: #cdebfc;
     font-weight: 600;
     line-height: 1.5;
     margin: 0 0 1rem 0;
@@ -351,7 +351,7 @@ h3.major,
 h4.major,
 h5.major,
 h6.major {
-    border-bottom: solid 1px #ffffff;
+    border-bottom: solid 1px #cdebfc;
     width: -moz-max-content;
     width: -webkit-max-content;
     width: -ms-max-content;
@@ -412,7 +412,7 @@ sup {
 }
 
 blockquote {
-    border-left: solid 4px #ffffff;
+    border-left: solid 4px #cdebfc;
     font-style: italic;
     margin: 0 0 2rem 0;
     padding: 0.5rem 0 0.5rem 2rem;
@@ -443,7 +443,7 @@ pre code {
 
 hr {
     border: 0;
-    border-bottom: solid 1px #ffffff;
+    border-bottom: solid 1px #cdebfc;
     margin: 2.75rem 0;
 }
 
@@ -529,7 +529,7 @@ form>.fields>.field.quarter {
 }
 
 label {
-    color: #ffffff;
+    color: #cdebfc;
     display: block;
     font-size: 0.8rem;
     font-weight: 300;
@@ -555,7 +555,7 @@ textarea {
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
     background-color: transparent;
     border-radius: 4px;
-    border: solid 1px #ffffff;
+    border: solid 1px #cdebfc;
     color: inherit;
     display: block;
     outline: 0;
@@ -580,8 +580,8 @@ input[type="tel"]:focus,
 select:focus,
 textarea:focus {
     background: rgba(157, 198, 233, 0.226);
-    border-color: #ffffff;
-    box-shadow: 0 0 0 1px #ffffff;
+    border-color: #cdebfc;
+    box-shadow: 0 0 0 1px #cdebfc;
 }
 
 select {
@@ -595,8 +595,8 @@ select {
 }
 
 select option {
-    color: #ffffff;
-    background: #1b1f22;
+    color: #cdebfc;
+    background: #1f435f;
 }
 
 select:focus::-ms-value {
@@ -639,7 +639,7 @@ input[type="radio"]+label {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color: #ffffff;
+    color: #cdebfc;
     cursor: pointer;
     display: inline-block;
     font-size: 0.8rem;
@@ -667,7 +667,7 @@ input[type="radio"]+label:before {
     -ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
     border-radius: 4px;
-    border: solid 1px #ffffff;
+    border: solid 1px #cdebfc;
     content: '';
     display: inline-block;
     height: 1.65rem;
@@ -681,17 +681,17 @@ input[type="radio"]+label:before {
 
 input[type="checkbox"]:checked+label:before,
 input[type="radio"]:checked+label:before {
-    background: #ffffff !important;
-    border-color: #ffffff !important;
-    color: #1b1f22;
+    background: #cdebfc !important;
+    border-color: #cdebfc !important;
+    color: #1f405a;
     content: '\f00c';
 }
 
 input[type="checkbox"]:focus+label:before,
 input[type="radio"]:focus+label:before {
     background: rgba(157, 198, 233, 0.226);
-    border-color: #ffffff;
-    box-shadow: 0 0 0 1px #ffffff;
+    border-color: #cdebfc;
+    box-shadow: 0 0 0 1px #cdebfc;
 }
 
 input[type="checkbox"]+label:before {
@@ -732,7 +732,7 @@ input[type="radio"]+label:before {
 
 .box {
     border-radius: 4px;
-    border: solid 1px #ffffff;
+    border: solid 1px #cdebfc;
     margin-bottom: 2rem;
     padding: 1.5em;
 }
@@ -884,7 +884,7 @@ ul.alt {
 }
 
 ul.alt li {
-    border-top: solid 1px #ffffff;
+    border-top: solid 1px #cdebfc;
     padding: 0.5em 0;
 }
 
@@ -1073,7 +1073,7 @@ table {
 }
 
 table tbody tr {
-    border: solid 1px #ffffff;
+    border: solid 1px #cdebfc;
     border-left: 0;
     border-right: 0;
 }
@@ -1087,7 +1087,7 @@ table td {
 }
 
 table th {
-    color: #ffffff;
+    color: #cdebfc;
     font-size: 0.9em;
     font-weight: 600;
     padding: 0 0.75em 0.75em 0.75em;
@@ -1095,11 +1095,11 @@ table th {
 }
 
 table thead {
-    border-bottom: solid 2px #ffffff;
+    border-bottom: solid 2px #cdebfc;
 }
 
 table tfoot {
-    border-top: solid 2px #ffffff;
+    border-top: solid 2px #cdebfc;
 }
 
 table.alt {
@@ -1107,7 +1107,7 @@ table.alt {
 }
 
 table.alt tbody tr td {
-    border: solid 1px #ffffff;
+    border: solid 1px #cdebfc;
     border-left-width: 0;
     border-top-width: 0;
 }
@@ -1147,8 +1147,8 @@ button,
     background-color: transparent;
     border-radius: 4px;
     border: 0;
-    box-shadow: inset 0 0 0 1px #ffffff;
-    color: #ffffff !important;
+    box-shadow: inset 0 0 0 1px #cdebfc;
+    color: #cdebfc !important;
     cursor: pointer;
     display: inline-block;
     font-size: 0.8rem;
@@ -1211,8 +1211,8 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-    background-color: #ffffff;
-    color: #1b1f22 !important;
+    background-color: #cdebfc;
+    color: #223e53 !important;
     font-weight: 600;
 }
 
