@@ -11,6 +11,7 @@ html {
 
 .clickme {
     font-size: 1.3em;
+    color: rgb(198, 234, 255)!important;
 }
 
 .embed-responsive {
