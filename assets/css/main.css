@@ -5,6 +5,11 @@
 	Custom styles
 */
 
+.doodles-img {
+	max-width: 100%;
+	height: auto;
+}
+
 html {
     overflow-y: scroll;
 }
