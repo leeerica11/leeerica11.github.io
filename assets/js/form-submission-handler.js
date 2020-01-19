@@ -67,6 +67,29 @@
             return false;
         }
 
+        // Default is the first created captcha object. There is only one.
+        var authToken = grecaptcha.getResponse();
+
+        $.ajax({
+            beforeSend: function(request) {
+                request.setRequestHeader("Origin", "leeerica.com");
+              },
+            method: "POST",
+            url: "https://www.google.com/recaptcha/api/siteverify",
+            data: {
+                secret: "6LdHp9AUAAAAAB9JDLokLUVhZxoSVLFlyBMkH0tW",
+                response: authToken,
+            },
+          })
+          .done(function( msg, stuff) {
+              alert("user successfully verified");
+              console.log(msg, stuff);
+            })
+            .fail(function(msg) {
+                alert("verification failed");
+                console.log(msg);
+            });
+
         if (data.email && !validEmail(data.email)) { // if email is not valid show error
             var invalidEmail = form.querySelector(".email-invalid");
             if (invalidEmail) {
@@ -74,28 +97,29 @@
                 return false;
             }
         } else {
-            disableAllButtons(form);
-            var url = form.action;
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', url);
-            // xhr.withCredentials = true;
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function() {
-                // console.log(xhr.status, xhr.statusText);
-                // console.log(xhr.responseText);
-                var formElements = form.querySelectorAll(".form-elements");
-                formElements.forEach((elm) => elm.style.display = "none");
-                var thankYouMessage = form.querySelector(".thankyou_message");
-                if (thankYouMessage) {
-                    thankYouMessage.style.display = "block";
-                }
-                return;
-            };
-            // url encode form data for sending as post data
-            var encoded = Object.keys(data).map(function(k) {
-                return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-            }).join('&');
-            xhr.send(encoded);
+            console.log("I should do nothing");
+            // disableAllButtons(form);
+            // var url = form.action;
+            // var xhr = new XMLHttpRequest();
+            // xhr.open('POST', url);
+            // // xhr.withCredentials = true;
+            // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            // xhr.onreadystatechange = function() {
+            //     // console.log(xhr.status, xhr.statusText);
+            //     // console.log(xhr.responseText);
+            //     var formElements = form.querySelectorAll(".form-elements");
+            //     formElements.forEach((elm) => elm.style.display = "none");
+            //     var thankYouMessage = form.querySelector(".thankyou_message");
+            //     if (thankYouMessage) {
+            //         thankYouMessage.style.display = "block";
+            //     }
+            //     return;
+            // };
+            // // url encode form data for sending as post data
+            // var encoded = Object.keys(data).map(function(k) {
+            //     return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+            // }).join('&');
+            // xhr.send(encoded);
         }
     }
 
