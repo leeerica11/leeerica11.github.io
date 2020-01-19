@@ -4,15 +4,6 @@
         return re.test(email);
     }
 
-    function validateHuman(honeypot) {
-        if (honeypot) { //if hidden form filled up
-            console.log("Robot Detected!");
-            return true;
-        } else {
-            console.log("Welcome Human!");
-        }
-    }
-
     // get all data in form and return object
     function getFormData(form) {
         var elements = form.elements;
@@ -63,44 +54,57 @@
         var form = event.target;
         var data = getFormData(form); // get the values submitted in the form
 
-        if (validateHuman(data.honeypot)) { //if form is filled, form will not be submitted
-            return false;
-        }
-
         if (data.email && !validEmail(data.email)) { // if email is not valid show error
             var invalidEmail = form.querySelector(".email-invalid");
             if (invalidEmail) {
                 invalidEmail.style.display = "block";
                 return false;
             }
-        } else {
-            disableAllButtons(form);
-            var url = form.action;
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', url);
-            // xhr.withCredentials = true;
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function() {
-                // console.log(xhr.status, xhr.statusText);
-                // console.log(xhr.responseText);
-                var formElements = form.querySelectorAll(".form-elements");
-                formElements.forEach((elm) => elm.style.display = "none");
-                var thankYouMessage = form.querySelector(".thankyou_message");
-                if (thankYouMessage) {
-                    thankYouMessage.style.display = "block";
-                }
-                return;
-            };
-            // url encode form data for sending as post data
-            var encoded = Object.keys(data).map(function(k) {
-                return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-            }).join('&');
-            xhr.send(encoded);
         }
+
+        // Default is the first created captcha object. There is only one.
+        var authToken = grecaptcha.getResponse();
+
+        // async request to verify user grecaptcha
+        $.ajax({
+            method: "POST",
+            url: "https://dg1q6cj03b.execute-api.us-east-1.amazonaws.com/default/verifyRecaptcha",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({
+                response: authToken,
+            }),
+            crossDomain: true,
+          })
+          .done(function(resp) {
+            isHuman = resp["isHuman"]
+            if (isHuman) {
+                disableAllButtons(form);
+                var url = form.action;
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', url);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    var formElements = form.querySelectorAll(".form-elements");
+                    formElements.forEach((elm) => elm.style.display = "none");
+                    var thankYouMessage = form.querySelector(".thankyou_message");
+                    if (thankYouMessage) {
+                        thankYouMessage.style.display = "block";
+                    }
+                    return;
+                };
+                // url encode form data for sending as post data
+                var encoded = Object.keys(data).map(function(k) {
+                    return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                }).join('&');
+                xhr.send(encoded);
+            }
+          })
+          .fail(function(msg) {
+              alert("grecaptcha verification failed.");
+            });
     }
 
     function loaded() {
-        // console.log("Contact form submission handler loaded successfully.");
         // bind to the submit event of our form
         var forms = document.querySelectorAll("form.gform");
         for (var i = 0; i < forms.length; i++) {
