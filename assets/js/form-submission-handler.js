@@ -64,6 +64,11 @@
 
         // Default is the first created captcha object. There is only one.
         var authToken = grecaptcha.getResponse();
+        // User should fill out the captcha
+        if (!authToken) {
+            alert("Please complete the captcha");
+            return false;
+        }
 
         // async request to verify user grecaptcha
         $.ajax({
